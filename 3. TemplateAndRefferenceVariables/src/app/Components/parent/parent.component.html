@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <!-- <div class="form-container">
+        <div class="profile">
+            <img src="" alt="" #profileImg>
+        </div>
+        <form>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" [(ngModel)]="firstName">
+            <label for="middleName">Middle Name</label>
+            <input type="text" name="middleName" [(ngModel)]="middleName"> 
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" [(ngModel)]="lastName">
+            <label for="profile" name="profile"></label>
+            <input type="file" name="profile" id="profile" (change)="readUrl($event)" [(ngModel)]="profile">
+            <button type="submit" (click)="onFormSubmit()">Submit</button>
+        </form>
+    </div> -->
+
+    <input type="text" name="firstName" #firstName>
+    <input type="text" name="lastName" #lastName>
+    <button (click)="onSubmitFN(firstName)">Submit first name</button>
+    <button (click)="onSubmitLN()">Submit last Name</button>
+
+
+    
+
+
+
+
+</div>
+<app-child #child></app-child>
+<button (click)="onChildSubmit(child)">NewSubmit</button>
