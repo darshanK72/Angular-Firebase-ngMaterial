@@ -1,32 +1,57 @@
-<div class="wrapper">
-    <!-- <div class="form-container">
-        <div class="profile">
-            <img src="" alt="" #profileImg>
+<div class="container">
+    <div class="wrapper">
+        <div class="details">
+            <p class="message" #showMessage></p>
+            <p class="message" #showMessage></p>
+            <p class="message" #showMessage></p>
         </div>
-        <form>
-            <label for="firstName">First Name</label>
-            <input type="text" name="firstName" [(ngModel)]="firstName">
-            <label for="middleName">Middle Name</label>
-            <input type="text" name="middleName" [(ngModel)]="middleName"> 
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" [(ngModel)]="lastName">
-            <label for="profile" name="profile"></label>
-            <input type="file" name="profile" id="profile" (change)="readUrl($event)" [(ngModel)]="profile">
-            <button type="submit" (click)="onFormSubmit()">Submit</button>
-        </form>
-    </div> -->
-
-    <input type="text" name="firstName" #firstName>
-    <input type="text" name="lastName" #lastName>
-    <button (click)="onSubmitFN(firstName)">Submit first name</button>
-    <button (click)="onSubmitLN()">Submit last Name</button>
-
-
     
-
-
-
-
+        <div class="input-item">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" #firstName>
+            <button (click)="onSubmitFN(firstName)">Submit</button>
+        </div>
+    
+        <div class="input-item">
+            <label for="middleName">Middle Name</label>
+            <input type="text" name="middleName" #middleName>
+            <button (click)="onSubmitMN(middleName)">Submit</button>
+        </div>
+    
+        <div class="input-item">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" #lastName>
+            <button (click)="onSubmitLN()">Submit</button>
+        </div>
+    
+        <div class="submit-buttom">
+            <button (click)="onAllSubmit()">Submit All</button>
+        </div>
+    </div>
 </div>
-<app-child #child></app-child>
-<button (click)="onChildSubmit(child)">NewSubmit</button>
+<div class="holder-2">
+    <app-child #child></app-child>
+    <button (click)="onChildSubmit(child)">NewSubmit</button>
+</div>
+<div class="holder-3">
+    <app-card>
+        <h1 class="title">Heading 1</h1>
+        <p class="content" #content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, animi?
+        </p>
+        
+    </app-card>
+    <app-card>
+        <h1 class="title">Heading 2</h1>
+        <p class="content" #content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, animi?
+        </p>
+        
+    </app-card>
+    <app-card>
+        <h1 class="title">Heading 3</h1>
+        <p class="content" #content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, animi?
+        </p>
+    </app-card>
+</div>

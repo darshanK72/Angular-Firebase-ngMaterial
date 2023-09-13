@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ChildComponent {
 
-  variable!:string;
+  variable:boolean = false;
+
+  weekdays:string[] = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+
+  toggle(){
+    this.variable = !this.variable;
+  }
 
 }

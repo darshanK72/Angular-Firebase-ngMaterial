@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { first, toArray } from 'rxjs';
 import { ChildComponent } from '../child/child.component';
 
 @Component({
@@ -11,25 +12,42 @@ export class ParentComponent {
   @ViewChild('lastName')
   inputElement!:ElementRef;
 
+  @ViewChildren('showMessage')
+  messageEmelents!:QueryList<ElementRef>;
+
   firstName!:string;
   lastName!:string;
+  middleName!:string;
   
   onSubmitFN(element:HTMLInputElement){
-    console.log(element);
     this.firstName = element.value;
-    console.log(this.firstName);
   }
 
+  onSubmitMN(element:HTMLInputElement){
+    this.middleName = element.value;
+  }
   
   onSubmitLN(){
     this.lastName = this.inputElement.nativeElement.value;
-    console.log(this.inputElement);
-    console.log(this.lastName)
   }
 
   onChildSubmit(child:ChildComponent){
     console.log(child);
   } 
+
+  onAllSubmit(){
+    let details:string[] = [];
+
+    details.push(this.firstName);
+    details.push(this.middleName);
+    details.push(this.lastName);
+    
+    let i = 0;
+    this.messageEmelents.forEach(ele => {
+      ele.nativeElement.innerText = details[i];
+      i++;
+    })
+  }
 
   
 

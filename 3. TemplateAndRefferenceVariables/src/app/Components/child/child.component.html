@@ -1,1 +1,15 @@
-<p>child works!</p>
+<div class="holder">
+    <p *ngIf="variable; else message2">Message 1</p>
+    <ng-template #message2>
+        <p>Message 2</p>
+    </ng-template>
+    <button (click)="toggle()">Toggle</button>
+</div>
+<div class="holder2">
+    <ng-container *ngFor="let weekday of weekdays">
+        <div class="content">
+            <p>{{weekday}}</p>
+        </div>
+    </ng-container>
+    <ng-container *ngTemplateOutlet="message2"></ng-container>
+</div>
