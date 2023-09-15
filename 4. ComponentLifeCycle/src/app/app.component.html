@@ -5,11 +5,12 @@
           <input type="text" #inputValue>
           <button (click)="onSubmit()">Submit</button>
       </div>
-      <app-main [content]="value">
+      <app-main [content]="value" *ngIf="destroy">
         <p>Lorem ipsum dolor sit amet. projected content</p>
         <p #otherMessage> other message </p>
         <p>{{value}}</p>
       </app-main>
+      <button (click)="Destroy()">Destroy</button>
   </div>
 </div>
 

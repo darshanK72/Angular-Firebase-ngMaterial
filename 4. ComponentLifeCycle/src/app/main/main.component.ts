@@ -1,11 +1,11 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, ContentChild, DoCheck, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnChanges,OnInit,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit{
+export class MainComponent implements OnChanges,OnInit,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy{
 
   @Input()
   content!:string;
@@ -57,4 +57,14 @@ export class MainComponent implements OnChanges,OnInit,DoCheck,AfterContentInit,
     console.log("Main Component ngAfterViewInit Called");
     console.log(this.message);
   }
+
+  ngAfterViewChecked(): void {
+    console.log("Main Component ngAfterViewChecked Called");
+    console.log(this.message);
+  }
+
+  ngOnDestroy(): void {
+    console.log("Main Component ngOnDestroy Called");
+  }
+
 }

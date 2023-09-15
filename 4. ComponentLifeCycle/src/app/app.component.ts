@@ -14,12 +14,18 @@ export class AppComponent{
 
   value!:string;
 
+  destroy:boolean = true;
+
   constructor(){
     console.log("App Component Constructor Called");
   }
 
   onSubmit(){
     this.value = this.inputValue.nativeElement.value;
+  }
+
+  Destroy(){
+    this.destroy = !this.destroy;
   }
 
 
