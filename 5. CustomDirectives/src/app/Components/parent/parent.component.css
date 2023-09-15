@@ -1,0 +1,17 @@
+.red-background{
+    background-color: red;
+    color: white;
+}
+
+.yellow-background{
+    background-color: yellow;
+    color: white;
+}
+
+.disabled{
+    background-color: rgb(196, 193, 193);
+}
+
+.not-disabled{
+    background-color: wheat;
+}

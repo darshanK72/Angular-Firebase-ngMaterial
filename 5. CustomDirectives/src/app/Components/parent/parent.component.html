@@ -1,0 +1,11 @@
+<div class="container">
+    <p appYellowbg appHover>Ths is paragraph with custom directive</p>
+    <app-child></app-child>
+    <div class="newbox" [background]="'pink'" [color]="'white'">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, nulla?</p>
+        <button [button]="{width:'80px',height:'30px',padding:'0.4rem 0.8rem',backgroundColor:'green',color:'white'}">Click</button>
+    </div>
+    <div class="para" [disabled]="false">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat accusamus veritatis corrupti adipisci sunt delectus omnis obcaecati culpa suscipit!</p>
+    </div>
+</div>
