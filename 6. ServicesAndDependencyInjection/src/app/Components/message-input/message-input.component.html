@@ -1,0 +1,9 @@
+<div class="holder">
+    <input type="text" name="message" [(ngModel)]="message">
+    <button (click)="submitMessage()">Submit</button>
+</div>
+<div class="ids">
+    <ng-container *ngFor="let id of ids">
+        <div class="box" (click)="getMessageDetails(id)">{{id}}</div>
+    </ng-container>
+</div>
