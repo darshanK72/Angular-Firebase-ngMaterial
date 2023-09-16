@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
+  active:boolean = false;
+
+  case:string = "second";
+
 }

@@ -8,4 +8,28 @@
     <div class="para" [disabled]="false">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat accusamus veritatis corrupti adipisci sunt delectus omnis obcaecati culpa suscipit!</p>
     </div>
+    <div class="para-2" [ngClass]="{'pink-background':true}">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium ratione, rem blanditiis eum deleniti optio provident quos. Molestias, at optio.</p>
+    </div>
+    <div class="para-3" [appClass]="{'pink-background':true}">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium ratione, rem blanditiis eum deleniti optio provident quos. Molestias, at optio.</p>
+    </div>
+    <div class="para-4" [ngStyle]="{backgroundColor:active ? 'black':'gray',color:'white',padding:'1rem'}">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus facilis nam quis quas fugiat illum! Mollitia aliquid consectetur deleniti.</p>
+    </div>
+    <div class="para-5" [appStyle]="{backgroundColor:active ? 'black':'gray',color:'white',padding:'1rem'}">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus facilis nam quis quas fugiat illum! Mollitia aliquid consectetur deleniti.</p>
+    </div>
+    <div class="para-6" *appIf="true" [appStyle]="{backgroundColor:active ? 'black':'gray',color:'white',padding:'1rem'}">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt fugiat, odio facere numquam repudiandae non laborum, modi atque soluta eveniet, quas doloribus nemo. Minus pariatur beatae odit id. Quos inventore non consectetur aspernatur voluptatibus accusantium ad magnam dolor, recusandae deserunt?</p>
+    </div>
+
+    <div class="switch-container" [ngSwitch]="case">
+
+        <p *ngSwitchCase="'first'">one</p>
+        <p *ngSwitchCase="'second'">two</p>
+        <p *ngSwitchCase="'third'">three</p>
+        <p *ngSwitchCase="'fourth'">four</p>
+
+    </div>
 </div>

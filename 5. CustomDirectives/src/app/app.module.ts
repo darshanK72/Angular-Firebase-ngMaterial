@@ -12,6 +12,9 @@ import { BackgroundDirective } from './Directives/background.directive';
 import { ColorDirective } from './Directives/color.directive';
 import { ButtonDirective } from './Directives/button.directive';
 import { DisabledDirective } from './Directives/disabled.directive';
+import { ClassDirective } from './Directives/class.directive';
+import { StyleDirective } from './Directives/style.directive';
+import { IfDirective } from './Directives/if.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { DisabledDirective } from './Directives/disabled.directive';
     BackgroundDirective,
     ColorDirective,
     ButtonDirective,
-    DisabledDirective
+    DisabledDirective,
+    ClassDirective,
+    StyleDirective,
+    IfDirective
   ],
   imports: [
     BrowserModule,
