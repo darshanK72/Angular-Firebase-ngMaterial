@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="counter">
+        <button (click)="decrement()">-</button>
+        <p>{{counter()}}</p>
+        <button (click)="increment()">+</button>
+    </div>
+    <div class="messages">
+        <ng-container *ngFor="let message of messages()">
+            <p>{{message}}</p>
+        </ng-container>
+    </div>
+</div>
