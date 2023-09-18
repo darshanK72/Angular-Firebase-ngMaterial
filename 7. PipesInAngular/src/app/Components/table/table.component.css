@@ -1,0 +1,54 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(105, 108, 131);
+}
+
+.student-table{
+    width: 80%;
+    height: 80%;
+    background-color: rgb(72, 74, 90);
+    padding: 3rem;
+    color: #ffffff;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.filters{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading{
+    background-color: rgb(44, 106, 96);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(234, 242, 246);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(44, 106, 96);
+    border-radius: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+table,tr,th,td{
+    border: 2px solid rgb(148, 173, 169);
+}
+.heading th{
+    border:none;
+}
+
+th,td{
+    padding:6px 12px;
+}

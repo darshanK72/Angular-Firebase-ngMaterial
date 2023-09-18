@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="student-table">
+        <h1>Student Management</h1>
+        <div class="filters">
+            <p>Filters</p>
+            <div class="gender-filter">
+                <label for="filterText">Gender : </label>
+                <select name="filterText" [(ngModel)]="filterText">
+                    <option value="all">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="total">
+            <p>Total Students : {{totalStudents | async}}</p>
+        </div>
+        <table>
+            <tr class="heading">
+                <th>Roll No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Date Of Birth</th>
+                <th>Course</th>
+                <th>Grades</th>
+                <th>Exam Fees</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <ng-container *ngFor="let student of studentList | filter : filterText">
+                <tr>
+                    <td>{{student.rollNo}}</td>
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.lastName}}</td>
+                    <td>{{student.gender | uppercase}}</td>
+                    <td>{{student.dateOfBirth | date : 'fullDate'}}</td>
+                    <td>{{student.course}}</td>
+                    <td>{{student.grades | percentage:100:2}}</td>
+                    <td>{{student.examFees | currency : 'USD' : true}}</td>
+                    <td class="edit-icon"><i class="fa-solid fa-pen-to-square"></i></td>
+                    <td class="delete-icon"><i class="fa-solid fa-trash"></i></td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+</div>
