@@ -1,0 +1,6 @@
+<p>course-detail works!</p>
+<h1>Course Id : {{courseId}}</h1>
+<div class="buttons">
+    <a [routerLink]="'/courses/course/' + (courseId - 1)">Previous</a>
+    <a [routerLink]="'/courses/course/' + (courseId + 1)">Next</a>
+</div>

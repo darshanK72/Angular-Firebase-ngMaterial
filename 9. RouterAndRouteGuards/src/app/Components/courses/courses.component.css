@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.box{
+    width: 100px;
+    height:100px;
+    background-color: green;
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.query-params{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

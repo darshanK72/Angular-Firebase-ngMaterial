@@ -1,0 +1,15 @@
+<div class="container">
+    <ng-container *ngFor="let number of numberList">
+        <!-- <div class="box" (click)="getCourseDetail(number)">
+            {{number}}
+        </div> -->
+        <a class="box" [routerLink]="'course/' + number" [state]="{value:number}">
+            {{number}}
+        </a>
+    </ng-container>
+</div>
+<div class="query-params">
+    <ng-container *ngFor="let param of queryParameters">
+        <h3>{{param[0] + ' : '+ param[1]}}</h3>
+    </ng-container>
+</div>
