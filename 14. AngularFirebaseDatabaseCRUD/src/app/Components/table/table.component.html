@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="student-table">
+        <h1>Student Management</h1>
+        <div class="filters">
+            <p>Filters</p>
+            <div class="gender-filter">
+                <label for="filterText">Gender : </label>
+                <select name="filterText" [(ngModel)]="filterText">
+                    <option value="all">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="total">
+            <p>Total Students : {{totalStudents}}</p>
+            <button class="insert-button" (click)="onInsertClicked()">
+                <i class="fa-solid fa-plus"></i> Add Student
+            </button>
+        </div>
+        <form #myForm="ngForm" (ngSubmit)="onFormSubmit()">
+            <table>
+                <tr class="heading">
+                    <th>Roll No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Date Of Birth</th>
+                    <th>Course</th>
+                    <th>Grades</th>
+                    <th>Exam Fees</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngIf="isInserting" ngModelGroup="insertDetails">
+                    
+                        <td></td>
+                        <td>
+                            <input type="text" name="firstName" ngModel placeholder="John">
+                        </td>
+                        <td>
+                            <input type="text" name="lastName" ngModel placeholder="Doe">
+                        </td>
+                        <td>
+                            <select name="gender" ngModel id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="date" name="dateOfBirth" ngModel>
+                        </td>
+                        <td>
+                            <input type="text" name="course" ngModel placeholder="B.E. Mech..">
+                        </td>
+                        <td>
+                            <input type="number" name="grades" ngModel placeholder="67" min="40" max="100">
+                        </td>
+                        <td>
+                            <input type="number" name="examFees" ngModel placeholder="800">
+                        </td>
+                        <td class="button-td">
+                            <button type="submit">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                            </button>
+                        </td>
+                        <td class="button-td">
+                            <button (click)="onInsertCancle()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </td>
+                </tr>
+                <ng-container *ngFor="let student of studentList | filter : filterText">
+                    <tr ngModelGroup="editDetails">
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.rollNo}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="text" name="rollNo" ngModel readonly value="{{student.rollNo}}">
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.firstName}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="text" name="firstName" ngModel>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.lastName}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="text" name="lastName" ngModel>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.gender | uppercase}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <select name="gender" ngModel id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.dateOfBirth | date :
+                            'fullDate'}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="date" name="dateOfBirth" ngModel>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.course}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="text" name="course" ngModel>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{getStudentGrade(student.grades)| percentage:100:2 }}
+                        </td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="number" name="grades" ngModel min="40" max="100">
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit">{{student.examFees | currency : 'USD'
+                            :
+                            true}}</td>
+                        <td *ngIf="isEditing && student.id === studentToEdit">
+                            <input type="number" name="examFees" ngModel>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit" class="button-td">
+                            <button class="edit-button" (click)="onEditClicked(student.id)">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                        </td>
+
+                        <td *ngIf="!isEditing || student.id !== studentToEdit" class="button-td">
+                            <button class="delete-button" (click)="onClickDelete(student.id)">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+
+                        <td *ngIf="isEditing && student.id === studentToEdit" class="button-td">
+                            <button type="submit" class="edit-button">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                            </button>
+                        </td>
+
+                        <td *ngIf="isEditing && student.id === studentToEdit" class="button-td">
+                            <button class="edit-button" (click)="onEditCancled()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </ng-container>
+            </table>
+        </form>
+    </div>
+</div>
