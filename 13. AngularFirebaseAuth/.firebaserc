@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularfirebaseauth-ba576": {
+      "hosting": {
+        "AngularFirebaseAuth": [
+          "angularfirebaseauth-ba576"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularfirebaseauth-ba576"
+  }
+}

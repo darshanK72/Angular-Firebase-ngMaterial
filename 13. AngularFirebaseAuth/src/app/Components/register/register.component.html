@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" ngModel>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" ngModel>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </div>
+                        <div class="mb-3 form-check text-center">
+                            <p>Already have account? <a routerLink="/register">Login</a></p>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button id="google-btn" (click)="loginWithGoogle()" class="btn btn-outline-primary w-100">
+                                <img src="../../../assets/img/google.png"> Sign Up With Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
