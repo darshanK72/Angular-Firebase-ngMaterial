@@ -1,0 +1,9 @@
+<div class="container">
+  <img [src]="profileUrl" alt="" class="img">
+  <input type="file" name="file" id="file" (change)="selectFile($event)">
+  <button (click)="uploadFile()">Upload</button>
+  <div class="progress">
+    <p>Progress : {{progress}}</p>
+  </div>
+</div>
+<router-outlet></router-outlet>
