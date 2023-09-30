@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="wrapper">
+        <h1 class="heading">This is Heading</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ex obcaecati, voluptas ipsum eaque architecto aliquam animi enim quidem molestiae officia velit! Modi labore nisi repudiandae repellat earum a explicabo.</p>
+        <ng-container  *ngFor="let todo of todos">
+            <div class="todo" >
+                <h3 class="id">{{todo.id}}</h3>
+                <p class="title">{{todo.title}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>
