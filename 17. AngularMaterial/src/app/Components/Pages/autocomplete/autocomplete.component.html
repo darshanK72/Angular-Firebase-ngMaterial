@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <h3 class="left">Autocomplete</h3>
+    <mat-divider></mat-divider>
+    <div class="options">
+        <div class="row">
+            <mat-card>
+                <h5>Autocomplete</h5>
+                <form #myform="ngForm">
+                    <mat-form-field>
+                        <mat-label>Country</mat-label>
+                        <input type="text" matInput name="country" ngModel [matAutocomplete]="auto" (input)="onChanges($event)">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let ct of filterCountryList" [value]="ct">
+                                {{ct}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                    <br>
+                    <button mat-flat-button color="primary" type="submit" (click)="onSubmit(myform)">Submit</button>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,9 @@ import { FooterComponent } from './Components/Layout/footer/footer.component';
 import { HomeComponent } from './Components/Layout/home/home.component';
 import { ButtonsComponent } from './Components/Pages/buttons/buttons.component';
 import { ToggleComponent } from './Components/Pages/toggle/toggle.component';
+import { AutocompleteComponent } from './Components/Pages/autocomplete/autocomplete.component';
+import { FormsModule } from '@angular/forms';
+import { BadgeComponent } from './Components/Pages/badge/badge.component';
 
 
 @NgModule({
@@ -19,13 +22,16 @@ import { ToggleComponent } from './Components/Pages/toggle/toggle.component';
     FooterComponent,
     HomeComponent,
     ButtonsComponent,
-    ToggleComponent
+    ToggleComponent,
+    AutocompleteComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

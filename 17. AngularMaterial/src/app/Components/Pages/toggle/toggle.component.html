@@ -10,9 +10,23 @@
                 </div>
             </mat-card>
             <mat-card>
-                <h5>Raised Buttons</h5>
+                <h5>Single Selection</h5>
                 <div class="buttons-toggle">
-
+                    <mat-button-toggle-group name="favColor">
+                        <mat-button-toggle value="red">Red</mat-button-toggle>
+                        <mat-button-toggle value="yellow">Yellow</mat-button-toggle>
+                        <mat-button-toggle value="green">Green</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </mat-card>
+            <mat-card>
+                <h5>Multiple Selection</h5>
+                <div class="buttons-toggle">
+                    <mat-button-toggle-group name="favColor" multiple>
+                        <mat-button-toggle value="red">Red</mat-button-toggle>
+                        <mat-button-toggle value="yellow">Yellow</mat-button-toggle>
+                        <mat-button-toggle value="green">Green</mat-button-toggle>
+                    </mat-button-toggle-group>
                 </div>
             </mat-card>
         </div>
