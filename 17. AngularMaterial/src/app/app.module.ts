@@ -13,6 +13,10 @@ import { ToggleComponent } from './Components/Pages/toggle/toggle.component';
 import { AutocompleteComponent } from './Components/Pages/autocomplete/autocomplete.component';
 import { FormsModule } from '@angular/forms';
 import { BadgeComponent } from './Components/Pages/badge/badge.component';
+import { MenuComponent } from './Components/Pages/menu/menu.component';
+import { DialogComponent } from './Components/Pages/dialog/dialog.component';
+import { Dialog1Component } from './Components/Pages/dialog/dialog1/dialog1.component';
+import { CardComponent } from './Components/Pages/card/card.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { BadgeComponent } from './Components/Pages/badge/badge.component';
     ButtonsComponent,
     ToggleComponent,
     AutocompleteComponent,
-    BadgeComponent
+    BadgeComponent,
+    MenuComponent,
+    DialogComponent,
+    Dialog1Component,
+    CardComponent
   ],
   imports: [
     BrowserModule,

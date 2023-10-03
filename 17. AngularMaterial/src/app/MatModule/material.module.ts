@@ -11,6 +11,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from  '@angular/material/input';
 import { MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const Materials = [
   MatToolbarModule,
@@ -23,7 +27,11 @@ const Materials = [
   MatFormFieldModule,
   MatInputModule,
   MatAutocompleteModule,
-  MatBadgeModule
+  MatBadgeModule,
+  MatMenuModule,
+  MatDialogModule,
+  MatProgressBarModule,
+  MatTooltipModule,
 ];
 
 @NgModule({

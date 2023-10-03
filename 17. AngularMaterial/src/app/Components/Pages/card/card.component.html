@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <h3 class="left">Card</h3>
+    <mat-divider></mat-divider>
+    <div class="options">
+        <div class="row">
+            <mat-card class="example-card">
+                <mat-card-header class="mb-2">
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                    alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>This card has divider and indeterminate progress as footer</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptas animi asperiores quae
+                        excepturi cum mollitia doloribus perspiciatis ratione voluptates, omnis ipsam cupiditate velit
+                        modi nobis. Eum neque aliquid quaerat.</p>
+                    <mat-divider></mat-divider>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </mat-card-footer>
+            </mat-card>
+            <button mat-raised-button #tooltip="matTooltip" matTooltip="Info about the action"
+                matTooltipPosition="right"
+                aria-tooltip="Button that displays and hides a tooltip triggered by other buttons">
+                Action
+            </button>
+        </div>
+    </div>
+</div>
