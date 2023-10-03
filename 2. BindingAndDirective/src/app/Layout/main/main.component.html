@@ -1,0 +1,124 @@
+<!-- String Interpolation -->
+<h2>{{heading}}</h2>
+
+<h1>Hello World This is {{title}}</h1>
+<div class="alert alert-success">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque magnam provident ab dolor dicta quia at, cupiditate
+  sint molestiae nemo. Ipsum aspernatur at esse maiores.
+</div>
+<h4>Welcome to Angular</h4>
+<h3>{{message}}</h3>
+
+<h3> Expression result using string Interpolation : {{235 + value}}</h3>
+
+<h1> Method Result using string Interpolation : {{getResult()}}</h1>
+
+<!-- Property Binding -->
+<img [src]="imgPath" alt="micky mouse image">
+<input type="text" [placeholder]="nameval" [disabled]="isDisabled">
+
+<!-- Event Binding -->
+
+
+<!-- Two Way Data Binding -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <form class="d-flex" (submit)="submit($event)">
+        <input type="text" (input)="typing($event)">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+    <div class="col-6">
+      <form action="">
+        <input type="text" name="searchvalue2" [(ngModel)]="searchvalue2" (change)="modelChange($event)">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+    <div class="col-8">
+      Name
+      <input type="text" name="name1" (change)="name1Changed($event)">
+      <br>
+      country
+      <select name="country1" (change)="country1Changed($event)">
+        <option [ngValue]="null" disabled>Select Country</option>
+        <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>{{searchvalue1}}</p>
+    </div>
+    <div class="col-6">
+      <p>{{searchvalue2}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray">
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Index</th>
+            <th>First</th>
+            <th>Last</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cust of customers;let i = index;let f = first;let l = last">
+            <td>{{cust.customerNo}}</td>
+            <td>{{cust.name}}</td>
+            <td>{{cust.city}}</td>
+            <td>{{cust.state}}</td>
+            <td>{{cust.country}}</td>
+            <td>{{i}}</td>
+            <td>{{f}}</td>
+            <td>{{l}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-8 mx-auto mb-4">
+      <form>
+        <input type="text" name="operator" [(ngModel)]="operator">
+        <input type="number" name="num1" [(ngModel)]="num1">
+        <input type="number" name="num2" [(ngModel)]="num2">
+        <span class="col-8" [ngSwitch]="operator">
+          <span *ngSwitchCase="'+'">{{num1 + num2}}</span>
+          <span *ngSwitchCase="'-'">{{num1 - num2}}</span>
+          <span *ngSwitchCase="'*'">{{num1 * num2}}</span>
+          <span *ngSwitchCase="'/'">{{num1 / num2}}</span>
+          <span *ngSwitchCase="'%'">{{num1 % num2}}</span>
+          <span *ngSwitchDefault> Invalid Operator</span>
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 mx-auto mb-4">
+        <div *ngIf="age >= 18; else cannot">
+            <p>You Can Vote</p>
+        </div>
+        <ng-template #cannot>
+            <p>You Cannot Vote</p>
+        </ng-template>
+    </div>
+  </div>
+</div>
