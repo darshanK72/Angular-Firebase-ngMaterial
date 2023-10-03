@@ -1,0 +1,11 @@
+mat-toolbar{
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+p{
+    width: 80%;
+    text-align: center;
+    word-wrap: break-word;
+}

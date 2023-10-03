@@ -1,0 +1,63 @@
+.left{
+    text-align: left;
+    padding: 10px;
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.options{
+    padding: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+mat-card{
+    width: 48%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+mat-card h5{
+    margin-bottom: 0.4rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:540px) {
+    .wrapper{
+        width: 100%;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+    mat-card{
+        width: 100%;
+    }
+
+    .buttons{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
