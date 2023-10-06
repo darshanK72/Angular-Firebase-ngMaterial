@@ -9,6 +9,11 @@ import { ObservableComponent } from './rxjs/observable/observable.component';
 import { OfFromComponent } from './rxjs/of-from/of-from.component';
 import { PromiseComponent } from './rxjs/promise/promise.component';
 import { FilterComponent } from './rxjs/filter/filter.component';
+import { SubjectComponent } from './rxjs/subject/subject.component';
+import { ConcatComponent } from './rxjs/concat/concat.component';
+import { MergeComponent } from './rxjs/merge/merge.component';
+import { MergeMapComponent } from './rxjs/merge-map/merge-map.component';
+import { ConcatMapComponent } from './rxjs/concat-map/concat-map.component';
 
 const routes: Routes = [
   {
@@ -40,6 +45,21 @@ const routes: Routes = [
   },
   {
     path : 'filter', component : FilterComponent
+  },
+  {
+    path : 'subject', component : SubjectComponent
+  },
+  {
+    path : 'concat', component : ConcatComponent
+  },
+  {
+    path : 'merge', component : MergeComponent
+  },
+  {
+    path : 'mergeMap', component : MergeMapComponent
+  },
+  {
+    path : 'concatMap', component : ConcatMapComponent
   }
 
 

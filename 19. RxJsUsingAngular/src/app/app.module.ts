@@ -13,6 +13,11 @@ import { ObservableComponent } from './rxjs/observable/observable.component';
 import { MapComponent } from './rxjs/map/map.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FilterComponent } from './rxjs/filter/filter.component';
+import { SubjectComponent } from './rxjs/subject/subject.component';
+import { ConcatComponent } from './rxjs/concat/concat.component';
+import { MergeComponent } from './rxjs/merge/merge.component';
+import { MergeMapComponent } from './rxjs/merge-map/merge-map.component';
+import { ConcatMapComponent } from './rxjs/concat-map/concat-map.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { FilterComponent } from './rxjs/filter/filter.component';
     OfFromComponent,
     ObservableComponent,
     MapComponent,
-    FilterComponent
+    FilterComponent,
+    SubjectComponent,
+    ConcatComponent,
+    MergeComponent,
+    MergeMapComponent,
+    ConcatMapComponent
   ],
   imports: [
     BrowserModule,
