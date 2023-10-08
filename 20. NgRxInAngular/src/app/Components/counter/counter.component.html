@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="value">
+            {{count$ | async}}
+        </div>
+        <div class="buttons">
+            <button class="add" (click)="increment()">
+                <h1>+</h1>
+            </button>
+            <button class="sub" (click)="decrement()">
+                <h1>-</h1>
+            </button>
+            <button class="sub" (click)="reset()">
+                <h1>?</h1>
+            </button>
+        </div>
+        <div class="custom">
+            <label for="inp">Number</label>
+            <input type="number" name="inp" #inp>
+            <button (click)="custom(inp)">Submit</button>
+        </div>
+    </div>
+</div>
