@@ -12,6 +12,7 @@ import { AppStore } from './Store/app.store';
 import { EffectsModule } from '@ngrx/effects';
 import { PostComponent } from './Components/post/post.component';
 import { PostEffects } from './Store/post/post.effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PostEffects } from './Store/post/post.effects';
     HttpClientModule,
     StoreModule.forRoot(AppStore),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([PostEffects])
+    EffectsModule.forRoot([PostEffects]),
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
