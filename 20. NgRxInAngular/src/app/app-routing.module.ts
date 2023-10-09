@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './Components/blog/blog.component';
 import { CounterComponent } from './Components/counter/counter.component';
+import { PostComponent } from './Components/post/post.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'blog',component:BlogComponent
+  },
+  {
+    path: 'post',component:PostComponent
   }
 ];
 

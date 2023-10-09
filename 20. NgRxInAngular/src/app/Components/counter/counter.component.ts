@@ -9,7 +9,7 @@ import {
   reset,
 } from 'src/app/Store/counter/counter.actions';
 import { count } from 'src/app/Store/counter/counter.selectors';
-import { AppState } from 'src/app/Store/store.model';
+import { AppState } from 'src/app/Store/app.state';
 
 @Component({
   selector: 'app-counter',

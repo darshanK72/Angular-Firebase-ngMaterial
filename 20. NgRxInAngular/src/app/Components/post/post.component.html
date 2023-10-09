@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="blogs">
+            {{posts$ | async | json}}
+        </div>
+       <div class="buttons">
+        <button (click)="getPosts()">Get Posts</button>
+        <button (click)="addPost()">Add Post</button>
+        <button (click)="updatePost()">Update Post</button>
+        <button (click)="deletePost()">Delete Post</button>
+       </div>
+    </div>
+</div>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Blog } from 'src/app/Models/Blog';
 import { addBlog, deleteBlog, updateBlog } from 'src/app/Store/blog/blog.actions';
 import { blogs } from 'src/app/Store/blog/blog.selectors';
-import { AppState } from 'src/app/Store/store.model';
+import { AppState } from 'src/app/Store/app.state';
+import { Blog } from 'src/app/Models/Blog';
 
 @Component({
   selector: 'app-blog',
